@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>小考</title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+		<style>
+		</style>
+
+	</head>
+
+	<body>
+		<h1 id="12">Web Programming</h1><p>
+		<div id="content">
+		<h4 >Content</h4><p>
+		<div id="123">
+		<ul>
+			<li id="chan">HTML</li>
+			<li id="chancss">CSS</li>
+			<li>DOM</li>
+			<li>JavaScript</li>
+			<li id="jsp">JSP</li>
+		</ul>
+	</div>
+</div>
+		<script>
+		function Id() {
+			document.getElementById("12").innerHTML +="    "+"4104029003";
+		}
+
+		function TextChange () {
+
+			var html = document.getElementById("chan");
+			var css = document.getElementById("chancss");
+			var newnode = document.createElement("li");
+			var newtextnode = document.createTextNode("MySQL");
+
+			newnode.appendChild(newtextnode);
+			document.getElementById("jsp").appendChild(newnode);
+			html.innerHTML="HTML5";
+			css.innerHTML="CSS3";
+		}
+
+		$(document).ready(function() {
+			$("#changecss").mouseenter(function()	{
+			$("#content").css("color","red");
+			$("#content").css("font-size","25px");
+		})
+		$("#changecss").mouseleave(function()	{
+		$("#content").css("color","black");
+		$("#content").css("font-size","16px");})
+	});
+ 	</script>
+
+			<input type="button" value="以JS更改元素內容" onclick="TextChange();">
+			<input type="button" id="changecss" value="以JQuery更改CSS">
+			<input type="button" value="加入學號" onclick="Id();" >
+	</body>
+</html>
